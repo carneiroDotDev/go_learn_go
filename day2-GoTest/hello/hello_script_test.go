@@ -12,25 +12,25 @@ func TestHello(t *testing.T) {
 	}
 
 	t.Run("Test with name", func(t *testing.T) {
-		actual := hello("Luiz", "")
+		actual := Hello("Luiz", "")
 		expected := "Hello, Luiz!\n"
 		checkCorrectMessage(t, actual, expected)
 	})
 
 	t.Run("Test without name", func(t *testing.T) {
-		actual := hello("", "")
+		actual := Hello("", "")
 		expected := "Hello, World!\n"
 		checkCorrectMessage(t, actual, expected)
 	})
 
 	t.Run("in Spanish", func(t *testing.T) {
-		actual := hello("Elodie", "es")
+		actual := Hello("Elodie", "es")
         expected := "Hola, Elodie!\n"
         checkCorrectMessage(t, actual, expected)
     })
 
 	t.Run("in French", func(t *testing.T) {
-		actual := hello("Gael", "fr")
+		actual := Hello("Gael", "fr")
         expected := "Bonjour, Gael!\n"
         checkCorrectMessage(t, actual, expected)
     })
